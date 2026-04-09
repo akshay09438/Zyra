@@ -180,7 +180,7 @@ export function Navbar() {
                           fontWeight: 700,
                           letterSpacing: '-0.02em',
                           lineHeight: 1.15,
-                          color: isActive ? '#C8F400' : '#FFFFFF',
+                          color: isActive ? '#2bc8a1' : '#FFFFFF',
                           textDecoration: 'none',
                           transition: 'color 0.2s ease, opacity 0.2s ease',
                         }}
