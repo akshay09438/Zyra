@@ -140,9 +140,8 @@ function WorkCard({ project }: { project: (typeof PROJECTS)[number] }) {
           lazySrc={`${CF_BASE}/${project.cfStream}/iframe?autoplay=true&muted=true&loop=true&controls=false&preload=metadata&poster=${encodeURIComponent(`${CF_BASE}/${project.cfStream}/thumbnails/thumbnail.jpg?height=600`)}`}
           style={{
             position: 'absolute',
-            top: '50%', left: '50%',
-            width: '100%', height: '350%',
-            transform: 'translate(-50%, -50%)',
+            inset: 0,
+            width: '100%', height: '100%',
             border: 'none',
             opacity: hovered ? 1 : 0.65,
             transition: 'opacity 0.4s ease',
@@ -219,9 +218,8 @@ function WorkCardMobile({ project }: { project: (typeof PROJECTS)[number] }) {
           lazySrc={`${CF_BASE}/${project.cfStream}/iframe?autoplay=true&muted=true&loop=true&controls=false&preload=metadata&poster=${encodeURIComponent(`${CF_BASE}/${project.cfStream}/thumbnails/thumbnail.jpg?height=600`)}`}
           style={{
             position: 'absolute',
-            top: '50%', left: '50%',
-            width: '100%', height: '350%',
-            transform: 'translate(-50%, -50%)',
+            inset: 0,
+            width: '100%', height: '100%',
             border: 'none', opacity: 0.75, pointerEvents: 'none',
           }}
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"

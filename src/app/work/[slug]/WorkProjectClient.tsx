@@ -321,10 +321,9 @@ export function WorkProjectClient({
                 }}
               >
                 {project.cfStream ? (
-                  /* Vertical player: iframe scaled up to push CF black bars outside overflow:hidden */
                   <iframe
                     src={`https://customer-rphzzo1xs9tbitpo.cloudflarestream.com/${project.cfStream}/iframe?poster=https%3A%2F%2Fcustomer-rphzzo1xs9tbitpo.cloudflarestream.com%2F${project.cfStream}%2Fthumbnails%2Fthumbnail.jpg%3Fheight%3D600`}
-                    style={{ position: 'absolute', top: '50%', left: '50%', width: '180%', height: '180%', transform: 'translate(-50%, -50%)', border: 'none' }}
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
                     allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                     allowFullScreen
                   />
@@ -350,10 +349,9 @@ export function WorkProjectClient({
               }}
             >
               {project.cfStream ? (
-                /* Horizontal player: same cover approach */
                 <iframe
                   src={`https://customer-rphzzo1xs9tbitpo.cloudflarestream.com/${project.cfStream}/iframe?poster=https%3A%2F%2Fcustomer-rphzzo1xs9tbitpo.cloudflarestream.com%2F${project.cfStream}%2Fthumbnails%2Fthumbnail.jpg%3Fheight%3D600`}
-                  style={{ position: 'absolute', top: '50%', left: '50%', width: '180%', height: '180%', transform: 'translate(-50%, -50%)', border: 'none' }}
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
                   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                   allowFullScreen
                 />
