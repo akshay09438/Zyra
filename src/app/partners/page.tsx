@@ -40,7 +40,7 @@ const PARTNERS = [
 
 export default function PartnersPage() {
   return (
-    <div className="bg-[#080808] text-white min-h-screen overflow-x-hidden antialiased">
+    <div className="bg-[#080808] text-white antialiased">
 
       {/* ── Hero ──────────────────────────────────────────────────── */}
       <section className="relative w-full h-[80vh] min-h-[520px] flex items-center justify-center overflow-hidden">
@@ -108,7 +108,7 @@ export default function PartnersPage() {
       </section>
 
       {/* ── Section header ────────────────────────────────────────── */}
-      <div style={{ padding: 'clamp(60px, 8vw, 100px) clamp(32px, 6vw, 96px) clamp(40px, 5vw, 64px)' }}>
+      <div style={{ padding: 'clamp(60px, 8vw, 100px) clamp(32px, 6vw, 96px) clamp(40px, 5vw, 64px)', overflow: 'hidden' }}>
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
