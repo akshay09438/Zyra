@@ -119,7 +119,8 @@ const CF_BASE = 'https://customer-rphzzo1xs9tbitpo.cloudflarestream.com'
 /* ── Desktop card ──────────────────────────────────────────────── */
 function WorkCard({ project }: { project: (typeof PROJECTS)[number] }) {
   const [hovered, setHovered] = useState(false)
-  const cardWidth = 'clamp(200px, 22vw, 340px)'
+  const isPortrait = project.aspect === '9/16'
+  const cardWidth = isPortrait ? 'clamp(120px, 13vw, 200px)' : 'clamp(200px, 22vw, 340px)'
 
   return (
     <Link
@@ -127,7 +128,7 @@ function WorkCard({ project }: { project: (typeof PROJECTS)[number] }) {
       className="relative flex-shrink-0 overflow-hidden block"
       style={{
         width: cardWidth,
-        aspectRatio: '16/9',
+        aspectRatio: project.aspect ?? '16/9',
         borderRadius: '4px',
         textDecoration: 'none',
       }}
@@ -211,7 +212,7 @@ function WorkCardMobile({ project }: { project: (typeof PROJECTS)[number] }) {
     <Link
       href={`/work/${project.id}`}
       className="relative overflow-hidden block"
-      style={{ aspectRatio: '16/9', borderRadius: '4px', textDecoration: 'none' }}
+      style={{ aspectRatio: project.aspect ?? '16/9', borderRadius: '4px', textDecoration: 'none' }}
     >
       {project.cfStream ? (
         <LazyCFIframe
