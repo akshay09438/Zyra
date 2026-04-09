@@ -46,7 +46,7 @@ const TEAM = [
   {
     name: 'Himangini Khanna',
     role: 'Lead AI Film Maker',
-    description: 'Himangini is the Lead AI Filmmaker, driving creative direction and execution across AI-powered film projects. She blends storytelling with advanced AI tools to produce compelling, high-quality visual narratives.',
+    description: 'Himangini Khanna is the Lead AI Filmmaker at Zyra, who makes "AI act like a human". At the frontier of AI cinema, she shapes performances, emotion, and moments as if they\'ve been lived before. Guided by a strong screenplay instinct and an eye for refined brand storytelling, her work transforms imagination into something almost tangible.',
     photo: '/team/himangini-khanna.webp',
     tags: ['AI Filmmaking', 'Creative Direction', 'Visual Narratives'],
   },
