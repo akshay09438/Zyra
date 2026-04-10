@@ -5,9 +5,12 @@ import { motion } from 'framer-motion'
 export function PageProgressBar() {
   return (
     <motion.div
-      initial={{ scaleX: 0, transformOrigin: 'left' }}
-      animate={{ scaleX: 1 }}
-      transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+      initial={{ scaleX: 0, opacity: 1 }}
+      animate={{ scaleX: 1, opacity: 0 }}
+      transition={{
+        scaleX: { duration: 0.8, ease: [0.4, 0, 0.2, 1] },
+        opacity: { duration: 0.3, delay: 0.8 },
+      }}
       style={{
         position: 'fixed',
         top: 0,
