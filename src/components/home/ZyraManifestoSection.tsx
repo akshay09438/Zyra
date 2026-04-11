@@ -73,7 +73,7 @@ export function ZyraManifestoSection() {
       ref={sectionRef}
       style={{
         backgroundColor: '#F5F4F0',
-        height: isMobile ? '220vh' : '340vh',
+        height: isMobile ? '170vh' : '340vh',
         position: 'relative',
       }}
     >
@@ -103,7 +103,7 @@ export function ZyraManifestoSection() {
           <p
             style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 'clamp(18px, 3.9vw, 63px)',
+              fontSize: isMobile ? 'clamp(22px, 5.5vw, 63px)' : 'clamp(18px, 3.9vw, 63px)',
               color: '#080808',
               lineHeight: 1.4,
               fontWeight: 400,

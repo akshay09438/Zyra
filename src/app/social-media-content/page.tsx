@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     title: service.metaTitle,
     description: service.metaDesc,
     url: 'https://www.thezyra.in/social-media-content',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: service.metaTitle,
+    description: service.metaDesc,
+    images: ['/assets/og-image.jpg'],
+  },
+  keywords: ['AI social media content India', 'social media content studio India', 'AI reels production India'],
+  alternates: { canonical: 'https://www.thezyra.in/social-media-content' },
 }
 
 export default function SocialMediaContentPage() {

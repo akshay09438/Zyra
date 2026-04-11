@@ -9,6 +9,34 @@ import { CTASection } from '@/components/home/CTASection'
 export const metadata: Metadata = {
   title: 'Blog | Zyra AI Content Studio',
   description: 'Thinking on AI production, brand storytelling, and the future of creative content in India.',
+  keywords: ['AI content production blog', 'AI brand storytelling India', 'AI video production insights', 'AI content studio blog'],
+  openGraph: {
+    title: 'The Zyra Journal | AI Content Production Blog India',
+    description: 'Ideas on AI production, brand storytelling, and the creative economy in India.',
+    url: 'https://www.thezyra.in/blog',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Zyra Journal | AI Content Blog India',
+    description: 'Ideas on AI production, brand storytelling, and the creative economy in India.',
+    images: ['/assets/og-image.jpg'],
+  },
+  alternates: { canonical: 'https://www.thezyra.in/blog' },
+}
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'The Zyra Journal',
+  description: 'Ideas on AI production, brand storytelling, and the creative economy in India.',
+  url: 'https://www.thezyra.in/blog',
+  inLanguage: 'en-IN',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Zyra',
+    url: 'https://www.thezyra.in',
+  },
 }
 
 export default function BlogPage() {
@@ -17,6 +45,7 @@ export default function BlogPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       {/* Hero */}
       <section className="bg-bg-primary pt-40 pb-24 md:pt-48 md:pb-32">
         <div className="max-w-7xl mx-auto px-6 md:px-10">

@@ -22,6 +22,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Zyra AI`,
     description: post.excerpt,
+    keywords: [post.category, 'AI content production India', 'Zyra AI studio'],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://www.thezyra.in/blog/${post.slug}`,
+      images: [{ url: post.poster || '/assets/og-image.jpg', width: 1200, height: 630 }],
+      type: 'article',
+      publishedTime: post.date,
+      authors: ['https://www.thezyra.in/about'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.poster || '/assets/og-image.jpg'],
+    },
+    alternates: { canonical: `https://www.thezyra.in/blog/${post.slug}` },
   }
 }
 
@@ -32,8 +49,39 @@ export default async function BlogPostPage({ params }: Props) {
 
   const related = ALL_POSTS.filter(p => p.slug !== slug).slice(0, 3)
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: 'en-IN',
+    keywords: post.category,
+    image: post.poster || 'https://www.thezyra.in/assets/og-image.jpg',
+    url: `https://www.thezyra.in/blog/${post.slug}`,
+    about: {
+      '@type': 'Thing',
+      name: 'AI Content Production in India',
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Zyra',
+      url: 'https://www.thezyra.in',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zyra',
+      logo: { '@type': 'ImageObject', url: 'https://www.thezyra.in/assets/zyra-logo.png' },
+    },
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* Back */}
       <div className="bg-bg-primary pt-28 pb-0">
         <div className="max-w-4xl mx-auto px-6 md:px-10">

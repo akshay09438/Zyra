@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     title: service.metaTitle,
     description: service.metaDesc,
     url: 'https://www.thezyra.in/ott-production',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: service.metaTitle,
+    description: service.metaDesc,
+    images: ['/assets/og-image.jpg'],
+  },
+  keywords: ['OTT content production India', 'AI OTT series India', 'AI streaming content production'],
+  alternates: { canonical: 'https://www.thezyra.in/ott-production' },
 }
 
 export default function OTTProductionPage() {

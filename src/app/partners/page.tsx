@@ -2,8 +2,20 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 const EASE = [0.16, 1, 0.3, 1] as [number, number, number, number]
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+  return isMobile
+}
 
 const PARTNERS = [
   {
@@ -42,6 +54,8 @@ const PARTNERS = [
 ]
 
 export default function PartnersPage() {
+  const isMobile = useIsMobile()
+
   return (
     <div className="bg-[#080808] text-white antialiased">
 
@@ -164,7 +178,7 @@ export default function PartnersPage() {
       {/* ── Stacking partner panels ───────────────────────────────── */}
       <div style={{ position: 'relative' }}>
         {PARTNERS.map((partner, i) => (
-          <PartnerPanel key={partner.index} partner={partner} index={i} />
+          <PartnerPanel key={partner.index} partner={partner} index={i} isMobile={isMobile} />
         ))}
         <div style={{ height: '20vh', backgroundColor: '#080808' }} />
       </div>
@@ -176,9 +190,11 @@ export default function PartnersPage() {
 function PartnerPanel({
   partner,
   index,
+  isMobile,
 }: {
   partner: (typeof PARTNERS)[number]
   index: number
+  isMobile: boolean
 }) {
   const isEven = index % 2 === 0
 
@@ -188,31 +204,31 @@ function PartnerPanel({
         position: 'sticky',
         top: 0,
         minHeight: '100vh',
-        height: '100vh',
+        height: isMobile ? 'auto' : '100vh',
         zIndex: index + 1,
         backgroundColor: '#080808',
         display: 'flex',
         alignItems: 'center',
-        padding: '0 clamp(48px, 5vw, 96px)',
+        padding: isMobile ? '0' : '0 clamp(48px, 5vw, 96px)',
       }}
     >
       <div
         style={{
           flex: 1,
-          height: '100%',
+          height: isMobile ? 'auto' : '100%',
           display: 'flex',
-          flexDirection: isEven ? 'row' : 'row-reverse',
+          flexDirection: isMobile ? 'column' : (isEven ? 'row' : 'row-reverse'),
           overflow: 'hidden',
         }}
       >
         {/* ── Text side ─────────────────────────────────────── */}
         <div
           style={{
-            flex: '0 0 50%',
+            flex: isMobile ? '0 0 auto' : '0 0 50%',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            padding: 'clamp(40px, 5vw, 80px)',
+            padding: isMobile ? 'clamp(28px, 6vw, 48px) clamp(20px, 5vw, 40px)' : 'clamp(40px, 5vw, 80px)',
             backgroundColor: '#FFFFFF',
             zIndex: 1,
           }}
@@ -247,7 +263,7 @@ function PartnerPanel({
           <p
             style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: 'clamp(13px, 1.05vw, 16px)',
+              fontSize: isMobile ? '16px' : 'clamp(13px, 1.05vw, 16px)',
               fontWeight: 400,
               color: 'rgba(8,8,8,0.6)',
               lineHeight: 1.8,
@@ -261,7 +277,8 @@ function PartnerPanel({
         {/* ── Visual side ───────────────────────────────────── */}
         <div
           style={{
-            flex: '0 0 50%',
+            flex: isMobile ? '0 0 58vw' : '0 0 50%',
+            minHeight: isMobile ? '58vw' : undefined,
             position: 'relative',
             overflow: 'hidden',
             backgroundColor: partner.accent,
@@ -273,7 +290,7 @@ function PartnerPanel({
             alt={partner.name}
             fill
             style={{ objectFit: 'cover' }}
-            sizes="50vw"
+            sizes={isMobile ? '100vw' : '50vw'}
           />
 
           {/* Index number */}

@@ -8,6 +8,20 @@ import { CTASection } from '@/components/home/CTASection'
 export const metadata: Metadata = {
   title: 'Services | Zyra AI Content Studio',
   description: 'AI Brand Films, Micro Drama Production, Performance Creatives, and Social Media Content - five pillars, one studio.',
+  keywords: ['AI content studio services India', 'AI brand films', 'AI OTT production', 'micro drama production India', 'AI performance creatives'],
+  openGraph: {
+    title: 'AI Content Studio Services | Zyra India',
+    description: 'AI Brand Films, Micro Drama Production, Performance Creatives, and Social Media Content — five pillars, one studio.',
+    url: 'https://www.thezyra.in/services',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Content Studio Services | Zyra India',
+    description: 'Five AI-powered content production services. One studio.',
+    images: ['/assets/og-image.jpg'],
+  },
+  alternates: { canonical: 'https://www.thezyra.in/services' },
 }
 
 function Curve({ from, to }: { from: string; to: string }) {
@@ -20,9 +34,25 @@ function Curve({ from, to }: { from: string; to: string }) {
   )
 }
 
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Zyra AI Content Studio Services',
+  description: 'Five AI-powered content production services — one studio.',
+  url: 'https://www.thezyra.in/services',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'AI Native Film Production', url: 'https://www.thezyra.in/ott-production' },
+    { '@type': 'ListItem', position: 2, name: 'AI Brand Films & Commercials', url: 'https://www.thezyra.in/ai-brand-films' },
+    { '@type': 'ListItem', position: 3, name: 'AI Micro Drama Production', url: 'https://www.thezyra.in/micro-drama-production' },
+    { '@type': 'ListItem', position: 4, name: 'Performance Marketing Ads', url: 'https://www.thezyra.in/ai-ad-creatives' },
+    { '@type': 'ListItem', position: 5, name: 'Social Media Content', url: 'https://www.thezyra.in/social-media-content' },
+  ],
+}
+
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
       {/* Hero, CREAM */}
       <section className="bg-[#F5F4F0] pt-40 pb-24 md:pt-48 md:pb-32">
         <div className="max-w-7xl mx-auto px-6 md:px-10">

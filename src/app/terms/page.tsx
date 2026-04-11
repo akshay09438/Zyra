@@ -4,6 +4,7 @@ import { FadeInUp } from '@/components/animations'
 export const metadata: Metadata = {
   title: 'Terms of Service | Zyra AI Content Studio',
   description: 'Terms and conditions for working with Zyra AI Content Studio.',
+  alternates: { canonical: 'https://www.thezyra.in/terms' },
 }
 
 const SECTIONS = [

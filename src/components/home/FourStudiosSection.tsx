@@ -97,7 +97,7 @@ function StudioPanel({
           <p
             style={{
               fontFamily: "'DM Sans', sans-serif",
-              fontSize: isMobile ? '15px' : 'clamp(14px, 1.1vw, 18px)',
+              fontSize: isMobile ? '17px' : 'clamp(14px, 1.1vw, 18px)',
               fontWeight: 400,
               color: 'rgba(8,8,8,0.55)',
               lineHeight: 1.7,

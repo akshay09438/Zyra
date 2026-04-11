@@ -62,6 +62,55 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://customer-rphzzo1xs9tbitpo.cloudflarestream.com" />
       </head>
       <body className="bg-bg-primary text-text-primary antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://www.thezyra.in/#organization',
+                  name: 'Zyra',
+                  url: 'https://www.thezyra.in',
+                  logo: 'https://www.thezyra.in/assets/zyra-logo.png',
+                  description:
+                    "India's premier AI Content Studio. Brand films, micro dramas, OTT series and performance creatives.",
+                  email: 'marketersatzyra@gmail.com',
+                  areaServed: 'IN',
+                },
+                {
+                  '@type': 'LocalBusiness',
+                  '@id': 'https://www.thezyra.in/#localbusiness',
+                  name: 'Zyra AI Content Studio',
+                  url: 'https://www.thezyra.in',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Gurgaon',
+                    addressRegion: 'Haryana',
+                    addressCountry: 'IN',
+                  },
+                  geo: {
+                    '@type': 'GeoCoordinates',
+                    latitude: '28.4595',
+                    longitude: '77.0266',
+                  },
+                  email: 'marketersatzyra@gmail.com',
+                  serviceType: 'AI Content Production',
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://www.thezyra.in/#website',
+                  name: 'Zyra',
+                  url: 'https://www.thezyra.in',
+                  description: "India's premier AI Content Studio",
+                  publisher: { '@id': 'https://www.thezyra.in/#organization' },
+                  inLanguage: 'en-IN',
+                },
+              ],
+            }),
+          }}
+        />
         <PageProgressBar />
         <CustomCursor />
         <Navbar />

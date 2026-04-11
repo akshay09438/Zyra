@@ -6,6 +6,20 @@ import { CTASection } from '@/components/home/CTASection'
 export const metadata: Metadata = {
   title: 'FAQ | Zyra AI Content Studio',
   description: 'Common questions about AI brand films, micro drama production, performance creatives, and working with Zyra.',
+  keywords: ['AI content studio FAQ', 'AI brand film questions', 'AI production India questions', 'Zyra FAQ'],
+  openGraph: {
+    title: 'FAQ | Zyra AI Content Studio India',
+    description: 'Common questions about AI brand films, micro drama production, performance creatives, and working with Zyra.',
+    url: 'https://www.thezyra.in/faq',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FAQ | Zyra AI Content Studio India',
+    description: 'Common questions about AI brand films, micro drama production, and working with Zyra.',
+    images: ['/assets/og-image.jpg'],
+  },
+  alternates: { canonical: 'https://www.thezyra.in/faq' },
 }
 
 const FAQ_ITEMS = [

@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     title: service.metaTitle,
     description: service.metaDesc,
     url: 'https://www.thezyra.in/ai-brand-films',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: service.metaTitle,
+    description: service.metaDesc,
+    images: ['/assets/og-image.jpg'],
+  },
+  keywords: ['AI brand films India', 'AI brand film production', 'cinematic brand commercials India'],
+  alternates: { canonical: 'https://www.thezyra.in/ai-brand-films' },
 }
 
 export default function AIBrandFilmsPage() {

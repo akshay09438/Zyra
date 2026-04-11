@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { HeroSection } from '@/components/home/HeroSection'
+
+export const metadata: Metadata = {
+  title: "Zyra | India's AI Content Studio — Brand Films, OTT & Micro Drama",
+  description:
+    "India's premier AI Content Studio. Brand films, micro dramas, OTT series & performance creatives at OTT-level quality. Trusted by Adani, Cars24, Swiggy, NDTV and 20+ top brands.",
+  alternates: { canonical: 'https://www.thezyra.in' },
+}
 
 // Below-fold sections: code-split so the initial JS bundle stays small
 const LogoTicker        = dynamic(() => import('@/components/work/LogoTicker').then(m => ({ default: m.LogoTicker })))

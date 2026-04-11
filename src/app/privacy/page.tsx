@@ -4,6 +4,7 @@ import { FadeInUp } from '@/components/animations'
 export const metadata: Metadata = {
   title: 'Privacy Policy | Zyra AI Content Studio',
   description: 'How Zyra collects, uses, and protects your personal information.',
+  alternates: { canonical: 'https://www.thezyra.in/privacy' },
 }
 
 const SECTIONS = [

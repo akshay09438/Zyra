@@ -3,6 +3,19 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Contact | Zyra AI Content Studio',
   description: 'Schedule a meeting with Zyra. Book a 30-minute call and let\'s talk about your project.',
+  openGraph: {
+    title: 'Contact Zyra | Book an AI Content Studio Call',
+    description: 'Book a 30-minute call with Zyra. India\'s premier AI content studio.',
+    url: 'https://www.thezyra.in/contact',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Zyra | Book an AI Content Studio Call',
+    description: 'Book a 30-minute call with Zyra. India\'s premier AI content studio.',
+    images: ['/assets/og-image.jpg'],
+  },
+  alternates: { canonical: 'https://www.thezyra.in/contact' },
 }
 
 export default function ContactPage() {
