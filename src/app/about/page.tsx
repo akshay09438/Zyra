@@ -594,8 +594,8 @@ export default function AboutPage() {
             style={{
               position: 'relative',
               display: 'grid',
-              gridTemplateColumns: isMobile ? '1fr' : '1fr clamp(260px, 34vw, 460px)',
-              gap: isMobile ? 'clamp(24px, 6vw, 40px)' : 'clamp(40px, 6vw, 88px)',
+              gridTemplateColumns: isMobile ? '1fr' : '1fr clamp(380px, 48vw, 680px)',
+              gap: isMobile ? 'clamp(24px, 6vw, 40px)' : 'clamp(32px, 4vw, 60px)',
               alignItems: 'stretch',
               minHeight: isMobile ? 'unset' : 'clamp(520px, 60vw, 700px)',
               paddingTop: 'clamp(40px, 8vw, 100px)',
