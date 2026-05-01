@@ -53,7 +53,7 @@ export function HeroSection() {
           className="text-[11px] tracking-[0.25em] uppercase mb-6 md:mb-10"
           style={{ color: 'rgba(255,255,255,0.85)', fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}
         >
-          India&rsquo;s AI Content Studio
+          Global AI Content Studio
         </motion.p>
 
         {/* Headline — elegant mixed italic serif */}

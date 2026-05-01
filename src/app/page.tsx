@@ -3,9 +3,9 @@ import dynamic from 'next/dynamic'
 import { HeroSection } from '@/components/home/HeroSection'
 
 export const metadata: Metadata = {
-  title: "Zyra | India's AI Content Studio — Brand Films, OTT & Micro Drama",
+  title: "Zyra | Global AI Content Studio — Brand Films, OTT & Micro Drama",
   description:
-    "India's premier AI Content Studio. Brand films, micro dramas, OTT series & performance creatives at OTT-level quality. Trusted by Adani, Cars24, Swiggy, NDTV and 20+ top brands.",
+    "Global AI Content Studio. Brand films, micro dramas, OTT series & performance creatives at OTT-level quality. Trusted by Adani, Cars24, Swiggy, NDTV and 20+ top brands.",
   alternates: { canonical: 'https://www.thezyra.in' },
 }
 

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "About Zyra | India's AI Content Studio, Gurgaon",
+  title: "About Zyra | Global AI Content Studio",
   description:
-    "Zyra is India's premier AI content studio, founded in Gurgaon. We build AI-native film, brand content, and micro drama for brands that want to move at the speed of culture.",
+    "Zyra is a global AI content studio. We build AI-native film, brand content, and micro drama for brands that want to move at the speed of culture.",
   openGraph: {
     title: 'About Zyra | AI Content Studio India',
     description: "Meet the team behind India's premier AI content studio.",
