@@ -88,13 +88,13 @@ export function HeroSection() {
         >
           <a
             href="/work"
-            className="px-7 py-3 text-sm tracking-wide transition-all duration-300 hover:opacity-80 w-full sm:w-auto text-center"
+            className="px-7 py-3 text-sm tracking-wide transition-all duration-300 hover:border-white/60 w-full sm:w-auto text-center"
             style={{
-              backgroundColor: '#F5F5F0',
-              color: '#080808',
+              border: '1px solid rgba(255,255,255,0.2)',
+              color: 'rgba(255,255,255,0.7)',
               borderRadius: '9999px',
               fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 500,
+              fontWeight: 400,
             }}
           >
             View Our Work
@@ -103,13 +103,13 @@ export function HeroSection() {
             href="https://calendly.com/marketersatzyra/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-7 py-3 text-sm tracking-wide transition-all duration-300 hover:border-white/60 w-full sm:w-auto text-center"
+            className="px-7 py-3 text-sm tracking-wide transition-all duration-300 hover:opacity-80 w-full sm:w-auto text-center"
             style={{
-              border: '1px solid rgba(255,255,255,0.2)',
-              color: 'rgba(255,255,255,0.7)',
+              backgroundColor: '#F5F5F0',
+              color: '#080808',
               borderRadius: '9999px',
               fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 400,
+              fontWeight: 500,
             }}
           >
             Schedule a Call
